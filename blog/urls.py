@@ -1,4 +1,5 @@
 from django.urls import path 
+from django.conf import settings
 from . import views
 
 urlpatterns = [
@@ -10,5 +11,4 @@ urlpatterns = [
     path('post/<pk>/remove/', views.post_remove, name='post_remove'),
     path('post/<pk>/publish/', views.post_publish, name='post_publish'),
     path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
-    
 ]
